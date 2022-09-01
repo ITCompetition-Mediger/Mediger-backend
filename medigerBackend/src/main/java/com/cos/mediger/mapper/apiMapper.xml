@@ -1,0 +1,12 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cos.mediger.mapper.apiMapper">
+
+
+    <insert id="createApi" parameterType="com.cos.mediger.api.apiVO">
+        insert into druglist(entpName, itemName, itemSeq, efcyQesitm, useMethodQesitm, atpnQesitm, intrcQesitm, seQesitm, depositMethodQesitm, openDe, updateDe, itemImage)
+         values(#{entpName}, #{itemName}, #{itemSeq}, #{efcyQesitm}, #{useMethodQesitm}, #{atpnQesitm}, #{intrcQesitm}, #{seQesitm}, #{depositMethodQesitm}, #{openDe}, #{updateDe}, #{itemImage})
+    </insert>
+
+</mapper>

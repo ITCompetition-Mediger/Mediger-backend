@@ -1,5 +1,7 @@
 package com.Kakao_login.kakao_login.service;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -23,7 +25,7 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public OauthToken getAccessToken(String code) {
+    public OauthToken getAccessToken(String code) throws IOException {
 
         RestTemplate rt = new RestTemplate();
 
@@ -33,7 +35,7 @@ public class UserService {
         MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("grant_type", "authorization_code");
         params.add("client_id", "a5534c28d19e22a9b084cf7de4152af1");
-        params.add("redirect_uri", "http://localhost:8090/oauth/token");
+        params.add("redirect_uri", "http://localhost:8090/login/oauth/token");
         params.add("code", code);
         params.add("client_secret", "EADcKrlTOqPb8hMn6n3NZ5GqbIhtAfeZ");
 
@@ -58,11 +60,11 @@ public class UserService {
 
         return oauthToken;
     }
-    public User saveUser(String token) {
+    public User saveUser(String token) throws IOException {
 
         KakaoProfile profile = findProfile(token);
 
-		        User user = userRepository.findByKakaoEmail(profile.getKakao_account().getEmail());
+              User user = userRepository.findByKakaoEmail(profile.getKakao_account().getEmail());
 
                 if(user == null) {
             user = User.builder()
@@ -82,21 +84,22 @@ public class UserService {
 
 
     //(1-1)
-    public KakaoProfile findProfile(String token) {
+    public KakaoProfile findProfile(String token) throws IOException
+ {
 
         //(1-2)
         RestTemplate rt = new RestTemplate();
 
-		//(1-3)
+      //(1-3)
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "Bearer " + token); //(1-4)
         headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
 
-		//(1-5)
+      //(1-5)
         HttpEntity<MultiValueMap<String, String>> kakaoProfileRequest =
                 new HttpEntity<>(headers);
 
-		//(1-6)
+      //(1-6)
         // Http 요청 (POST 방식) 후, response 변수에 응답을 받음
         ResponseEntity<String> kakaoProfileResponse = rt.exchange(
                 "https://kapi.kakao.com/v2/user/me",
@@ -105,7 +108,7 @@ public class UserService {
                 String.class
         );
 
-		//(1-7)
+      //(1-7)
         ObjectMapper objectMapper = new ObjectMapper();
         KakaoProfile kakaoProfile = null;
         try {

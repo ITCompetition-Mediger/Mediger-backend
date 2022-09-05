@@ -6,10 +6,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.annotation.Id;
 
 import lombok.Builder;
 import lombok.Data;
@@ -18,11 +18,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "user_master") //(1)
+@Table(name = "user_master")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //(2)
-    @Column(name = "user_code") //(3)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_code")
     private Long userCode;
 
     @Column(name = "kakao_id")
@@ -41,7 +41,7 @@ public class User {
     private String userRole;
 
     @Column(name = "create_time")
-    @CreationTimestamp //(4)
+    @CreationTimestamp
     private Timestamp createTime;
 
     @Builder

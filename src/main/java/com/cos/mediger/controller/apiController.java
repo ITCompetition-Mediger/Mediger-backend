@@ -72,95 +72,95 @@ public class apiController{
 						Element eElement = (Element) nNode;
 						System.out.println("##################################");
 						
-						System.out.println(getTagValue("entpName",eElement));
+//						System.out.println(getTagValue("entpName",eElement));
 						if (getTagValue("entpName", eElement) != null) {
-							vo.setEntpName(getTagValue("entpName",eElement));
+							vo.setEntp_name(getTagValue("entpName",eElement));
 						}
 						else {
-							vo.setEntpName("blank");
+							vo.setEntp_name("blank");
 						}
-						System.out.println(getTagValue("itemName",eElement));
+//						System.out.println(getTagValue("itemName",eElement));
 						if (getTagValue("itemName",eElement)!=null) {
-						vo.setItemName(getTagValue("itemName",eElement));
+						vo.setItem_name(getTagValue("itemName",eElement));
 						}
 						else {
-							vo.setItemName("blank");
+							vo.setItem_name("blank");
 						}
 						System.out.println(getTagValue("itemSeq",eElement));
 						if (getTagValue("itemSeq",eElement)!=null) {
-							vo.setItemSeq(getTagValue("itemSeq",eElement));
+							vo.setItem_seq(getTagValue("itemSeq",eElement));
 							}
 							else {
-								vo.setItemSeq("blank");
+								vo.setItem_seq("blank");
 							}
-						System.out.println(getTagValue("efcyQesitm",eElement));
+//						System.out.println(getTagValue("efcyQesitm",eElement));
 						if (getTagValue("efcyQesitm",eElement)!=null) {
-							vo.setEfcyQesitm(getTagValue("efcyQesitm",eElement));
+							vo.setEfcy_qesitm(getTagValue("efcyQesitm",eElement));
 							}
 							else {
-								vo.setEfcyQesitm("blank");
+								vo.setEfcy_qesitm("blank");
 							}
-						System.out.println(getTagValue("useMethodQesitm",eElement));
+//						System.out.println(getTagValue("useMethodQesitm",eElement));
 						if (getTagValue("itemName",eElement)!=null) {
-							vo.setUseMethodQesitm(getTagValue("useMethodQesitm",eElement));
+							vo.setUse_method_qesitm(getTagValue("useMethodQesitm",eElement));
 							}
 							else {
-								vo.setUseMethodQesitm("blank");
+								vo.setUse_method_qesitm("blank");
 							}
-						System.out.println(getTagValue("atpnWarnQesitm",eElement));
+//						System.out.println(getTagValue("atpnWarnQesitm",eElement));
 						if (getTagValue("atpnWarnQesitm",eElement)!=null) {
-							vo.setAtpnWarnQesitm(getTagValue("atpnWarnQesitm",eElement));
+							vo.setAtpn_warn_qesitm(getTagValue("atpnWarnQesitm",eElement));
 							}
 							else {
-								vo.setAtpnWarnQesitm("blank");
+								vo.setAtpn_warn_qesitm("blank");
 							}
-						System.out.println(getTagValue("atpnQesitm",eElement));
+//						System.out.println(getTagValue("atpnQesitm",eElement));
 						if (getTagValue("atpnQesitm",eElement)!=null) {
-							vo.setAtpnQesitm(getTagValue("atpnQesitm",eElement));
+							vo.setAtpn_qesitm(getTagValue("atpnQesitm",eElement));
 							}
 							else {
-								vo.setAtpnQesitm("blank");
+								vo.setAtpn_qesitm("blank");
 							}
-						System.out.println(getTagValue("intrcQesitm",eElement));
+//						System.out.println(getTagValue("intrcQesitm",eElement));
 						if (getTagValue("intrcQesitm",eElement)!=null) {
-							vo.setIntrcQesitm(getTagValue("intrcQesitm",eElement));
+							vo.setIntrc_qesitm(getTagValue("intrcQesitm",eElement));
 							}
 							else {
-								vo.setIntrcQesitm("blank");
+								vo.setIntrc_qesitm("blank");
 							}
-						System.out.println(getTagValue("seQesitm",eElement));
+//						System.out.println(getTagValue("seQesitm",eElement));
 						if (getTagValue("seQesitm",eElement)!=null) {
-							vo.setSeQesitm(getTagValue("seQesitm",eElement));
+							vo.setSe_qesitm(getTagValue("seQesitm",eElement));
 							}
 							else {
-								vo.setSeQesitm("blank");
+								vo.setSe_qesitm("blank");
 							}
-						System.out.println(getTagValue("depositMethodQesitm",eElement));
+//						System.out.println(getTagValue("depositMethodQesitm",eElement));
 						if (getTagValue("depositMethodQesitm",eElement)!=null) {
-							vo.setDepositMethodQesitm(getTagValue("depositMethodQesitm",eElement));
+							vo.setDeposit_method_qesitm(getTagValue("depositMethodQesitm",eElement));
 							}
 							else {
-								vo.setDepositMethodQesitm("blank");
+								vo.setDeposit_method_qesitm("blank");
 							}
-						System.out.println(getTagValue("openDe",eElement));
+//						System.out.println(getTagValue("openDe",eElement));
 						if (getTagValue("openDe",eElement)!=null) {
-							vo.setOpenDe(getTagValue("openDe",eElement));
+							vo.setOpen_de(getTagValue("openDe",eElement));
 							}
 							else {
-								vo.setOpenDe("blank");
+								vo.setOpen_de("blank");
 							}
-						System.out.println(getTagValue("updateDe",eElement));
+//						System.out.println(getTagValue("updateDe",eElement));
 						if (getTagValue("updateDe",eElement)!=null) {
-							vo.setUpdateDe(getTagValue("updateDe",eElement));
+							vo.setUpdate_de(getTagValue("updateDe",eElement));
 							}
 							else {
-								vo.setUpdateDe("blank");
+								vo.setUpdate_de("blank");
 							}
-						System.out.println(getTagValue("itemImage",eElement));
+//						System.out.println(getTagValue("itemImage",eElement));
 						if(getTagValue("itemImage",eElement)!=null) {
-							vo.setItemImage(getTagValue("itemImage",eElement));
+							vo.setItem_image(getTagValue("itemImage",eElement));
 						}else {
-							vo.setItemImage("blank");
+							vo.setItem_image("blank");
 						}
 					}
 					try {

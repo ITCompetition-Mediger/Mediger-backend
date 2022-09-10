@@ -5,8 +5,8 @@
 
 
     <insert id="createApi" parameterType="com.cos.mediger.api.apiVO">
-        insert into druglist(entpName, itemName, itemSeq, efcyQesitm, useMethodQesitm, atpnQesitm, intrcQesitm, seQesitm, depositMethodQesitm, openDe, updateDe, itemImage)
-         values(#{entpName}, #{itemName}, #{itemSeq}, #{efcyQesitm}, #{useMethodQesitm}, #{atpnQesitm}, #{intrcQesitm}, #{seQesitm}, #{depositMethodQesitm}, #{openDe}, #{updateDe}, #{itemImage})
+        insert into druglist(entp_name, item_name, item_seq, efcy_qesitm, use_method_qesitm, atpn_qesitm, intrc_qesitm, se_qesitm, deposit_method_qesitm, open_de, update_de, item_image, atpn_warn_qesitm)
+         values(#{entp_name}, #{item_name}, #{item_seq}, #{efcy_qesitm}, #{use_method_qesitm}, #{atpn_qesitm}, #{intrc_qesitm}, #{se_qesitm}, #{deposit_method_qesitm}, #{open_de}, #{update_de}, #{item_image}, #{atpn_warn_qesitm})
     </insert>
 
 </mapper>

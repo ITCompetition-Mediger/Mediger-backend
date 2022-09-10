@@ -21,30 +21,30 @@ import lombok.Setter;
 @Entity
 public class apiVO {
 	@Autowired
-	private String atpnQesitm;
+	private String atpn_qesitm;
 	@Autowired
-	private String atpnWarnQesitm;
+	private String atpn_warn_qesitm;
 	@Autowired
-	private String depositMethodQesitm;
+	private String deposit_method_qesitm;
 	@Autowired
-	private String efcyQesitm;
+	private String efcy_qesitm;
 	@Autowired
-	private String entpName;
+	private String entp_name;
 	@Autowired
-	private String intrcQesitm;
+	private String intrc_qesitm;
 	@Autowired
-	private String itemImage;
+	private String item_image;
 	@Autowired
-	private String itemName;
+	private String item_name;
 	@Autowired
-	private String itemSeq;
+	private String item_seq;
 	@Autowired
-	private String openDe;
+	private String open_de;
 	@Autowired
-	private String seQesitm;
+	private String se_qesitm;
 	@Autowired
-	private String updateDe;
+	private String update_de;
 	@Autowired
-	private String useMethodQesitm;
+	private String use_method_qesitm;
 
 }

@@ -48,8 +48,8 @@ public class apiController{
 			String url="http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList";
 			String serviceKey="x6ClymIsRrZgFMQ86kkOl915ewDsnmf91rB2U6n1hZZG%2FLmk7BsTv0LngjaECB2KZ5ikoyxQW2ddXHgXWGe32g%3D%3D";
 			String decodeServiceKey = URLDecoder.decode(serviceKey, "UTF-8");
-			int pageNo=0;
-			for(int i = 0; i< 442; i++ ) {
+			int pageNo=328;
+			for(int i = 0; i< 116; i++ ) {
 				
 				
 

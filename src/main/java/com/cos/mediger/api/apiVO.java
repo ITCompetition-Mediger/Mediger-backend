@@ -1,5 +1,6 @@
 package com.cos.mediger.api;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -20,31 +21,31 @@ import lombok.Setter;
 @Setter
 @Entity
 public class apiVO {
-	@Autowired
+	@Column(columnDefinition = "MEDIUMTEXT")
 	private String atpn_qesitm;
-	@Autowired
+	@Column(columnDefinition = "MEDIUMTEXT")
 	private String atpn_warn_qesitm;
-	@Autowired
+	@Column(columnDefinition = "MEDIUMTEXT")
 	private String deposit_method_qesitm;
-	@Autowired
+	@Column(columnDefinition = "MEDIUMTEXT")
 	private String efcy_qesitm;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String entp_name;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String intrc_qesitm;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String item_image;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String item_name;
-	@Autowired
+	@Column(columnDefinition = "BIGINT")
 	private String item_seq;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String open_de;
-	@Autowired
+	@Column(columnDefinition = "MEDIUMTEXT")
 	private String se_qesitm;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String update_de;
-	@Autowired
+	@Column(columnDefinition = "VARCHAR(255)")
 	private String use_method_qesitm;
 
 }
